@@ -9,15 +9,19 @@ using namespace std;
 class Seat {
 private:
 	int id;
-	string state;
+	int state;
+	float price;
 public:
 	Seat();
+	~Seat();
 
-	void setID(int newID);
-	void setState(string newState);
+	void setID(int newID); 
+	void setState(int newState);
+	void setPrice(float newPrice);
 
 	int getID();
-	string getState();
+	int getState();
+	float getPrice();
 };
 
 #endif
