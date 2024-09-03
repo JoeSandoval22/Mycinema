@@ -8,8 +8,7 @@ void aboutTheCreator() {
 	cout << "Systems engineering student of the National University" << endl;
 	cout << "\n\n\n";
 }
-
-int main() {
+void mainMenu() {
 	Cinema CINEMA;
 	int options, subOptions, subOptions2, subOptions3, subOptions4;
 	do {
@@ -21,7 +20,7 @@ int main() {
 		cin >> options;
 
 		switch (options) {
-		case 1: 
+		case 1:
 			cout << "Archivo" << endl;
 			do {
 				cout << "1) Acerca del creador" << endl;
@@ -31,7 +30,7 @@ int main() {
 				case 1: aboutTheCreator();
 					break;
 				case 2:
-					return 0;
+					return;
 					break;
 				default:
 					break;
@@ -51,9 +50,10 @@ int main() {
 					CINEMA.addMovie();
 					break;
 				case 2:
-					CINEMA.showRooms(4);
+					CINEMA.showStateSeats();
 					break;
-				case 3: 
+				case 3:
+					CINEMA.addSchedule();
 					break;
 				default:
 					break;
@@ -86,5 +86,10 @@ int main() {
 			break;
 		}
 	} while (options != 4);
+}
+
+int main() {
+	
+	mainMenu();
 	return 0;
 }	

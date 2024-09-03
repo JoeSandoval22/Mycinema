@@ -132,6 +132,7 @@
     <ClCompile Include="joe-sandoval-proyecto1.cpp" />
     <ClCompile Include="movie.cpp" />
     <ClCompile Include="room.cpp" />
+    <ClCompile Include="sale.cpp" />
     <ClCompile Include="schedule.cpp" />
     <ClCompile Include="seat.cpp" />
   </ItemGroup>
@@ -140,6 +141,7 @@
     <ClInclude Include="cinema.h" />
     <ClInclude Include="movie.h" />
     <ClInclude Include="room.h" />
+    <ClInclude Include="sale.h" />
     <ClInclude Include="schedule.h" />
     <ClInclude Include="seat.h" />
   </ItemGroup>

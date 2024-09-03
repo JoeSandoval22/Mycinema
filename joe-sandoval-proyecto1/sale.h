@@ -1,16 +1,24 @@
 #pragma once
 #ifndef SALE_H
 #define SALE_H
-
 #include "booking.h"
-#include <iostream>
-using namespace std;
+
+
 class Sale {
 private:
 	Booking booking;
-	string idCostumer;
-	string cardNumber;
+	int idCostumer;
+	int cardNumber;
 public:
+	Sale();
+	Sale(int idCostumer, int cardNumber, Booking booking);
+	~Sale();
+
+	void setIdCostumer(int newIdCostumer);
+	void setCardNumber(int newCardNumber);
+
+	int getIdCostumer();
+	int getCardNumber();
+
 };
 #endif // !SALE_H
-

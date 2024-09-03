@@ -12,13 +12,10 @@ private:
 	Schedule schedule;
 	double totalPrice;
 	int bookingNumber;
-	int idCostumer;
-	int cardNumber;
-	
-
 public:
 
 	Booking();
+	Booking(double totalPrice, int bookingNumber, Schedule schedule);
 	~Booking();
 	
 	void setTotalPrice(double newTotalPrice);
@@ -27,11 +24,7 @@ public:
 	double getTotalPrice();
 	int getBookingNumber();
 
-	void setIdCostumer(int newIdCostumer);
-	void setCardNumber(int newCardNumber);
-
-	int getIdCostumer();
-	int getCardNumber();
+	Schedule getSchedule();
 };
 
 #endif // !BOOKING_H

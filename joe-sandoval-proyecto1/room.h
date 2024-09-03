@@ -7,6 +7,7 @@
 class Room {
 private:
 	string roomNumber;
+	Seat seats[SIZE];
 		
 public:
 	Room();

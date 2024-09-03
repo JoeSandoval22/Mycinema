@@ -8,22 +8,23 @@ using namespace std;
 
 class Schedule {
 private:
-	int date;
+	
 	int startHour;
 	int endHour;
 	Movie movie;
 	Room room;
 public:
 	Schedule();
+	Schedule(int startHour, int endHour, Movie movie, Room room);
 	~Schedule();
 
-	void setDate(int newDate);
 	void setStartHour(int newStarHour);
 	void setEndHour(int newEndHour);
 
-	int getDate();
 	int getStartHour();
 	int getEndHour();
+	Movie getMovie();
+	Room getRoom();
 };
 
 #endif // !SCHEDULE_H

@@ -4,10 +4,15 @@ Booking::Booking() {
 
 }
 
+Booking::Booking(double totalPrice, int bookingNumber, Schedule schedule) {
+	this->totalPrice = totalPrice;
+	this->bookingNumber = bookingNumber;
+	this->schedule = schedule;
+}
+
 Booking::~Booking() {
 
 }
-
 
 void Booking::setTotalPrice(double newTotalPrice) {
 	totalPrice = newTotalPrice;
@@ -25,18 +30,6 @@ int Booking::getBookingNumber() {
 	return bookingNumber;
 }
 
-void Booking::setIdCostumer(int newIdCostumer) {
-	idCostumer = newIdCostumer;
-}
-
-void Booking::setCardNumber(int newCardNumber) {
-	cardNumber = newCardNumber;
-}
-
-int Booking::getIdCostumer() {
-	return idCostumer;
-}
-
-int Booking::getCardNumber() {
-	return cardNumber;
+Schedule Booking::getSchedule() {
+	return schedule;
 }

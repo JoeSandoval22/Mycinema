@@ -3,12 +3,16 @@
 Schedule::Schedule() {
 
 }
-Schedule::~Schedule() {
 
+Schedule::Schedule(int startHour, int endHour, Movie movie, Room room) {
+    this->startHour = startHour;
+    this->endHour = endHour;
+    this->movie = movie;
+    this->room = room;
 }
 
-void Schedule::setDate(int newDate) {
-    date = newDate;
+Schedule::~Schedule() {
+
 }
 
 void Schedule::setStartHour(int newStarthour) {
@@ -19,14 +23,18 @@ void Schedule::setEndHour(int newEndhour) {
     endHour = newEndhour;
 }
 
-int Schedule::getDate() {
-    return date;
-}
-
 int Schedule::getStartHour() {
     return startHour;
 }
 
 int Schedule::getEndHour() {
     return endHour;
+}
+
+Movie Schedule::getMovie() {
+    return movie;
+}
+
+Room Schedule::getRoom() {
+    return room;
 }
