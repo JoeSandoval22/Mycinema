@@ -4,14 +4,24 @@ using namespace std;
 
 void aboutTheCreator() {
 	cout << "\n";
+	cout << "<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>" << endl;
 	cout << "System designed by Joe Sandoval" << endl;
 	cout << "Systems engineering student of the National University" << endl;
+	cout << "<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>" << endl;
 	cout << "\n\n\n";
 }
 void mainMenu() {
 	Cinema CINEMA;
 	int options, subOptions, subOptions2, subOptions3, subOptions4;
+	CINEMA.showStateSeats();
+	CINEMA.addSchedule();
+	CINEMA.addPrices();
+	
+
 	do {
+		CINEMA.addSchedule();
+		subOptions2 = 0;
+		system("cls");
 		cout << "1.Achivo " << endl;
 		cout << "2.Mantenimiento" << endl;
 		cout << "3.Reserva" << endl;
@@ -29,9 +39,6 @@ void mainMenu() {
 				switch (subOptions) {
 				case 1: aboutTheCreator();
 					break;
-				case 2:
-					return;
-					break;
 				default:
 					break;
 				}
@@ -44,21 +51,22 @@ void mainMenu() {
 				cout << "1) Peliculas" << endl;
 				cout << "2) Salas" << endl;
 				cout << "3) Horarios" << endl;
+				cout << "4) Salir" << endl;
 				cin >> subOptions2;
 				switch (subOptions2) {
 				case 1:
 					CINEMA.addMovie();
 					break;
 				case 2:
-					CINEMA.showStateSeats();
+					CINEMA.showRooms(4);
 					break;
 				case 3:
-					CINEMA.addSchedule();
+					CINEMA.showSchedule(4);
 					break;
 				default:
 					break;
 				}
-			} while (subOptions2 != 3);
+			} while (subOptions2 != 4);
 			break;
 
 		case 3:
@@ -69,8 +77,7 @@ void mainMenu() {
 				cin >> subOptions3;
 				switch (subOptions3) {
 				case 1:
-					break;
-				case 2:
+					CINEMA.addBooking();
 					break;
 				default:
 					break;
@@ -80,12 +87,13 @@ void mainMenu() {
 
 
 		case 4:
+			CINEMA.makeSale();
 			break;
 
 		default:
 			break;
 		}
-	} while (options != 4);
+	} while (options != 5);
 }
 
 int main() {

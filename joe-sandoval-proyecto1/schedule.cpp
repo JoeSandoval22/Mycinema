@@ -1,14 +1,15 @@
 #include "schedule.h"
-
+#include "movie.h"
+#include "room.h"
 Schedule::Schedule() {
 
 }
 
-Schedule::Schedule(int startHour, int endHour, Movie movie, Room room) {
+Schedule::Schedule(int startHour, int endHour, Movie newMovie, Room newRoom) {
     this->startHour = startHour;
     this->endHour = endHour;
-    this->movie = movie;
-    this->room = room;
+    this->movie = newMovie;
+    this->room = newRoom;
 }
 
 Schedule::~Schedule() {

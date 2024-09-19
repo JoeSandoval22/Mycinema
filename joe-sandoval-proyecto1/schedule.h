@@ -20,7 +20,7 @@ public:
 
 	void setStartHour(int newStarHour);
 	void setEndHour(int newEndHour);
-
+	
 	int getStartHour();
 	int getEndHour();
 	Movie getMovie();
