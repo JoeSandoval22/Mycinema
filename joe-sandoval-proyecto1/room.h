@@ -18,7 +18,12 @@ public:
 	
 	int getRoomNumber();
 	int getStateFromSeat(int rowNumber, int columnNumber);
+<<<<<<< HEAD
 	
+=======
+	int getBookingNumber();
+
+>>>>>>> 9fb795f004c7b90d8bd6c6ebb1a152b9ad1aa840
 	void setSaleIdCostumer(int,int,int);
 	void setSaleCardNumber(int, int, int);
 	Seat getSeat(int, int);

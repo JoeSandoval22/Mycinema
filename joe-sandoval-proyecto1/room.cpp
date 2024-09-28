@@ -12,12 +12,21 @@ Room::~Room() {
 
 void Room::setStateFromSeat(int rowNumber, int columnNumber, int state) { 
 	seats[rowNumber][columnNumber].setState(state);
+<<<<<<< HEAD
 }
 
 void Room::setRoomNumber(int newRoomNumber) {
 	roomNumber = newRoomNumber;
 }
 
+=======
+}
+
+void Room::setRoomNumber(int newRoomNumber)
+{
+}
+
+>>>>>>> 9fb795f004c7b90d8bd6c6ebb1a152b9ad1aa840
 
 int Room::getRoomNumber() {
 	return roomNumber;

@@ -211,7 +211,11 @@ void Cinema::makeSale() {
 	for (int index = 0; index < ROOMSIZE; index++) {
 		for (int rows = 0; rows < SIZE; rows++) {
 			for (int columns = 0; columns < SIZE; columns++) {
+<<<<<<< HEAD
 				if (cinemaRooms[index].getSeat(rows, columns).getSale().getIdCostumer() == idCostumer) {
+=======
+				if (cinemaRooms[index].getSeat(rows, columns).getSale().getIdCostumer()) {
+>>>>>>> 9fb795f004c7b90d8bd6c6ebb1a152b9ad1aa840
 					totalPrice = totalPrice + cinemaRooms[index].getPrice();
 					cout << "Sala: " << cinemaRooms[index].getRoomNumber() << endl;
 					cout << "Asiento: " << rows<<"-"<<columns << endl;
@@ -223,35 +227,59 @@ void Cinema::makeSale() {
 		}
 	}
 	if (pay == true) {
+<<<<<<< HEAD
 		string option;
 		int index;
+=======
+		string opcion;
+>>>>>>> 9fb795f004c7b90d8bd6c6ebb1a152b9ad1aa840
 		cout << "El precio total es: " << totalPrice << endl;
 		cout << "Desea realizar el pago?"<<endl;
 		cout << "a. " << "Si" << endl;
 		cout << "b. " << "No" << endl;
+<<<<<<< HEAD
 		cin >> option;
 		for (index = 0; index < ROOMSIZE; index++) {
 			for (int rows = 0; rows < SIZE; rows++) {
 				for (int columns = 0; columns < SIZE; columns++) {
 					if (cinemaRooms[index].getSeat(rows, columns).getSale().getIdCostumer() == idCostumer) {
 						if (option == "a") {
+=======
+		cin >> opcion;
+		for (int index = 0; index < ROOMSIZE; index++) {
+			for (int rows = 0; rows < SIZE; rows++) {
+				for (int columns = 0; columns < SIZE; columns++) {
+					if (cinemaRooms[index].getSeat(rows, columns).getSale().getIdCostumer() == idCostumer) {
+						if (opcion == "a") {
+>>>>>>> 9fb795f004c7b90d8bd6c6ebb1a152b9ad1aa840
 							cout << "Digite su numero de tarjeta de credito o debito: ";
 							cin >> card;
 							cinemaRooms[index].setSaleCardNumber(rows, columns, card);
 							cinemaRooms[index].setStateFromSeat(rows, columns, 2);
 
 						}
+<<<<<<< HEAD
 						if (option == "b") {
+=======
+						if (opcion == "b") {
+>>>>>>> 9fb795f004c7b90d8bd6c6ebb1a152b9ad1aa840
 							cinemaRooms[index].setStateFromSeat(rows, columns, 0);
 						}
 					}
 				}
 			}
 		}
+<<<<<<< HEAD
 		if (option == "a") {
 			cout << "Pago realizado exitosamente" << endl;
 		}
 		if (option == "b") {
+=======
+		if (opcion == "a") {
+			cout << "Pago realizado exitosamente" << endl;
+		}
+		if (opcion == "b") {
+>>>>>>> 9fb795f004c7b90d8bd6c6ebb1a152b9ad1aa840
 			cout << "Se cancelo la reserva de los asientos" << endl;
 		}
 
@@ -259,4 +287,8 @@ void Cinema::makeSale() {
 	if (pay == false) {
 		cout << "Este cliente no ha reservado asientos" << endl;
 	}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9fb795f004c7b90d8bd6c6ebb1a152b9ad1aa840
 }
