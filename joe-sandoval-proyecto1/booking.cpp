@@ -4,12 +4,6 @@ Booking::Booking() {
 
 }
 
-Booking::Booking(double totalPrice, int bookingNumber, Schedule schedule) {
-	this->totalPrice = totalPrice;
-	this->bookingNumber = bookingNumber;
-	this->schedule = schedule;
-}
-
 Booking::~Booking() {
 
 }
@@ -22,6 +16,10 @@ void Booking::setBookingNumber(int newBookingNumber) {
 	bookingNumber = newBookingNumber;
 }
 
+void Booking::setIdCostumerFromSale(int newIdCostumer) {
+	sale.setIdCostumer(newIdCostumer);
+}
+
 double Booking::getTotalPrice() {
 	return totalPrice;
 }
@@ -30,6 +28,8 @@ int Booking::getBookingNumber() {
 	return bookingNumber;
 }
 
-Schedule Booking::getSchedule() {
-	return schedule;
+int Booking::getIdCosumerFromSale()
+{
+	return sale.getIdCostumer();
 }
+

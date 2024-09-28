@@ -1,6 +1,7 @@
 #pragma once
 #ifndef SEAT_H
 #define SEAT_H
+#include "sale.h"
  // !SEAT_H
 
 #include <iostream>
@@ -10,18 +11,20 @@ class Seat {
 private:
 	int id;
 	int state;
-	float price;
+	Sale sale;
 public:
 	Seat();
 	~Seat();
 
 	void setID(int newID); 
 	void setState(int newState);
-	void setPrice(float newPrice);
 
 	int getID();
 	int getState();
-	float getPrice();
+
+	void setSaleIdCostumer(int);
+	void setSaleCard(int);
+	Sale getSale();
 };
 
 #endif

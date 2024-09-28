@@ -127,7 +127,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="booking.cpp" />
     <ClCompile Include="cinema.cpp" />
     <ClCompile Include="joe-sandoval-proyecto1.cpp" />
     <ClCompile Include="movie.cpp" />
@@ -137,7 +136,6 @@
     <ClCompile Include="seat.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="booking.h" />
     <ClInclude Include="cinema.h" />
     <ClInclude Include="movie.h" />
     <ClInclude Include="room.h" />

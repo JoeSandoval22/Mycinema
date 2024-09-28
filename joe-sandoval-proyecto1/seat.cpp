@@ -16,10 +16,6 @@ void Seat::setState(int newState) {
 	state = newState;
 }
 
-void Seat::setPrice(float newPrice) {
-	price = newPrice;
-}
-
 int Seat::getID() {
 	return id;
 }
@@ -28,6 +24,13 @@ int Seat::getState() {
 	return state; 
 }
 
-float Seat::getPrice() {
-	return price;
+void Seat::setSaleIdCostumer(int newIdCostumer) {
+	sale.setIdCostumer(newIdCostumer);
+}
+void Seat::setSaleCard(int newCard) {
+	sale.setCardNumber(newCard);
+}
+
+Sale Seat::getSale() {
+	return sale;
 }
